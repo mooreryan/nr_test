@@ -1,3 +1,11 @@
 #!/usr/bin/env ruby
 
 puts "Hello, World!"
+
+nr_hello = File.join File.dirname(__FILE__), "..", "vendor", "nr_hello"
+
+if File.exist? nr_hello
+  puts `#{nr_hello}`
+else
+  puts "No nr_hello"
+end
